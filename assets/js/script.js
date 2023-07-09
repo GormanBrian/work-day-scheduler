@@ -11,6 +11,7 @@ $(function () {
   });
 
   $(".time-block").each(function () {
+    $(this).removeClass(["past", "present", "future"]);
     // Get the time from the id
     let timeBlock = $(this).attr("id").match(/\d/g).join("");
     // Get the correct class based on the time relative to the block
