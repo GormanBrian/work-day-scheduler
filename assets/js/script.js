@@ -40,7 +40,7 @@ $(function () {
   });
 
   // Display the current date in the header
-  $("#currentDay").text(dayjs().format("dddd, MMMM D"));
+  $("#currentDay").text(dayjs().format("dddd, MMMM Do"));
 
   // Show HTML after changes have been made
   document.getElementsByTagName("html")[0].style.visibility = "visible";
