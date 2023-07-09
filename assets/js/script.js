@@ -36,18 +36,6 @@ $(function () {
     );
   });
 
-  $(".time-block").each(function () {
-    // Get the time from the id
-    let timeBlock = $(this).attr("id").match(/\d/g).join("");
-    // Get the correct class based on the time relative to the block
-    let hour = dayjs().hour();
-    let newClass = "future";
-    if (hour > timeBlock) newClass = "past";
-    else if (hour == timeBlock) newClass = "present";
-    // Add the new class to the time block
-    $(this).addClass(newClass);
-  });
-
   // Set the value of each time block's textarea to the stored description
   $(".description").each(function () {
     $(this).val(localStorage.getItem($(this).parent().attr("id")));
