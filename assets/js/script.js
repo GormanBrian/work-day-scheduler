@@ -14,16 +14,11 @@ $(function () {
   $(".time-block").each(function () {
     // Get the time from the id
     let timeBlock = $(this).attr("id").match(/\d/g).join("");
-    let newClass;
-    let currentHour = dayjs().hour();
     // Get the correct class based on the time relative to the block
-    if (currentHour > timeBlock) {
-      newClass = "past";
-    } else if (currentHour == timeBlock) {
-      newClass = "present";
-    } else {
-      newClass = "future";
-    }
+    let hour = dayjs().hour();
+    let newClass = "future";
+    if (hour > timeBlock) newClass = "past";
+    else if (hour == timeBlock) newClass = "present";
     // Add the new class to the time block
     $(this).addClass(newClass);
   });
