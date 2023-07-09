@@ -7,7 +7,7 @@ for (let i = 9; i <= 17; i++) {
   $("#time-block-container").append(
     $('<div class="row time-block"></div>')
       .attr("id", `hour-${i}`)
-      .addClass(hour)
+      .addClass(current)
       .append(
         $('<div class="col-2 col-md-1 hour text-center py-3"></div>').text(
           i <= 12 ? `${i}AM` : `${i - 12}PM`
