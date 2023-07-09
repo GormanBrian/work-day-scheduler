@@ -3,12 +3,10 @@
 // in the html.
 $(function () {
   $(".saveBtn").click(function () {
-    // Get the id of the parent element
-    let parentId = $(this).parent().attr("id");
-    // Get the description from the sibling textarea
-    let description = $(this).parent().find("textarea").val();
-    // Save the description to localStorage with the parent id as the key
-    localStorage.setItem(parentId, description);
+    // Get the parent element
+    let parent = $(this).parent();
+    // Save the textarea value to local storage
+    localStorage.setItem(parent.attr("id"), parent.find("textarea").val());
   });
 
   $(".time-block").each(function () {
