@@ -3,10 +3,11 @@
 // in the html.
 $(function () {
   $(".saveBtn").click(function () {
-    // Get the parent element
-    let parent = $(this).parent();
     // Save the textarea value to local storage
-    localStorage.setItem(parent.attr("id"), parent.find("textarea").val());
+    localStorage.setItem(
+      $(this).parent().attr("id"),
+      $(this).parent().find("textarea").val()
+    );
   });
 
   $(".time-block").each(function () {
