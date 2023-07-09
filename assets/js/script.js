@@ -12,8 +12,6 @@ $(function () {
   });
 
   $(".time-block").each(function () {
-    // Remove existing time classes
-    $(this).removeClass($(this).attr("class").split(" ").pop());
     // Get the time from the id
     let timeBlock = $(this).attr("id").match(/\d/g).join("");
     let newClass;
