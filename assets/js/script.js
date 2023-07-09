@@ -3,6 +3,7 @@
 // in the html.
 $(function () {
   for (let i = 9; i <= 17; i++) {
+    let id = "hour-" + i;
     let hour = dayjs().hour();
     let current = "future";
     if (hour == i) current = "present";
@@ -10,7 +11,7 @@ $(function () {
     // Create time block and append it to the outer container
     $("#time-block-container").append(
       $('<div class="row time-block"></div>')
-        .attr("id", `hour-${i}`)
+        .attr("id", id)
         .addClass(current)
         .append(
           $('<div class="col-2 col-md-1 hour text-center py-3"></div>').text(
@@ -20,7 +21,7 @@ $(function () {
         .append(
           $(
             '<textarea class="col-8 col-md-10 description" rows="3"></textarea>'
-          ).val(localStorage.getItem(`hour-${i}`) ?? " ")
+          ).val(localStorage.getItem(id) ?? " ")
         )
         .append(
           $(
