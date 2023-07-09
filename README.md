@@ -2,7 +2,7 @@
 
 ## Description
 
-This website allows you the schedule your workday with hourly time blocks. Each time block will communicate whether it is past, present, or future and can be saved to local storage.
+This website allows you the schedule your workday with hourly time blocks. Each time block will indicate whether it is past, present, or future and it's text can be saved to local storage.
 
 ## Usage
 
