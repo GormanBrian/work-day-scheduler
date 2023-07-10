@@ -35,7 +35,7 @@ $(function () {
     // Save the textarea value to local storage
     localStorage.setItem(
       $(this).parent().attr("id"),
-      $(this).parent().find("textarea").val()
+      $(this).siblings("textarea").val()
     );
   });
 
