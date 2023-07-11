@@ -1,8 +1,12 @@
+let startTime = 9; // 9AM
+let endTime = 17; // 5PM
+
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
-  for (let i = 9; i <= 17; i++) {
+  // Generate time blocks programmatically
+  for (let i = startTime; i <= endTime; i++) {
     let id = "hour-" + i;
     let hour = dayjs().hour();
     let current = "future";
