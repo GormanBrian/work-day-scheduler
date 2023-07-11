@@ -31,7 +31,7 @@ $(function () {
     );
   }
 
-  $(".saveBtn").click(function () {
+  $(".saveBtn").on("click", function () {
     // Save the textarea value to local storage
     localStorage.setItem(
       $(this).parent().attr("id"),
