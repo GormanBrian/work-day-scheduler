@@ -6,9 +6,9 @@ let endTime = 17; // 5PM
 // in the html.
 $(function () {
   // Generate time blocks programmatically
+  let hour = dayjs().hour();
   for (let i = startTime; i <= endTime; i++) {
     let id = "hour-" + i;
-    let hour = dayjs().hour();
     let current = "future";
     if (hour == i) current = "present";
     else if (hour > i) current = "past";
